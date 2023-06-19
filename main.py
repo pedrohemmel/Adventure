@@ -10,9 +10,9 @@ from tensorflow.keras.optimizers import Adam
 
 
 # For build Agent with keras rl
-from rl.agents import DQNAgent
-from rl.memory import SequentialMemory
-from rl.policy import LinearAnnealedPolicy, EpsGreedyQPolicy
+# from rl.agents import DQNAgent
+# from rl.memory import SequentialMemory
+# from rl.policy import LinearAnnealedPolicy, EpsGreedyQPolicy
 
 
 
@@ -43,9 +43,9 @@ actions = env.action_space.n
 model = build_model(height, width, channels, actions)
 # model.summary()
 
-dqn = build_agent(model, actions)
-dqn.compile(Adam(lr=1e-4))
-dqn.fit(env, nb_steps=10000, visualize=False, verbose=2)
+# dqn = build_agent(model, actions)
+# dqn.compile(Adam(lr=1e-4))
+# dqn.fit(env, nb_steps=10000, visualize=False, verbose=2)
 
 episodes = 10
 
